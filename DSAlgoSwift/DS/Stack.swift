@@ -10,6 +10,15 @@ import Foundation
 
 struct Stack<Element: Equatable>: Equatable{
     
+    subscript(index: Int) -> Element {
+        
+        get {
+            return self.storage[index]
+        }
+        set {
+             self.storage[index] = newValue
+        }
+    }
     //Storage
     private var storage: [Element] = []
     

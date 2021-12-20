@@ -13,12 +13,9 @@ extension Array where Element : Comparable {
     // Make sure we don't have just 1 item
     guard self.count > 1 else { return self }
     
-    print(self)
-
     for i in 1..<self.count {
         let temp = self[i]
         var j = i
-        print(temp)
         while j > 0 && order(self[j-1], temp) 	{
             self[j] = self[j-1]
             j -= 1
